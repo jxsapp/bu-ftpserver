@@ -11,9 +11,6 @@ import java.util.Properties;
 
 import org.junit.Test;
 
-import bu.file.ftp.server.Commander;
-import bu.file.ftp.server.SingleUserFtpConfig;
-
 /**
  * @author jxs
  */
@@ -21,11 +18,11 @@ public class CommaderPrintTest {
 
 	@Test
 	public void testPrintDefault() {
-		
+
 		Properties props = new Properties();
 		SingleUserFtpConfig config = new SingleUserFtpConfig(props);
-		
-		Commander.printUssage(config);
+
+		PrintUssageHolder.printUssage(config);
 	}
 
 	@Test
@@ -33,8 +30,8 @@ public class CommaderPrintTest {
 		Properties props = new Properties();
 		props.put("ssl", "true");
 		SingleUserFtpConfig config = new SingleUserFtpConfig(props);
-		
-		Commander.printUssage(config);
+
+		PrintUssageHolder.printUssage(config);
 	}
 
 	@Test
@@ -43,10 +40,10 @@ public class CommaderPrintTest {
 		props.put("port", "2003");
 		props.put("id", "jxs");
 		props.put("password", "1234");
-		
+
 		SingleUserFtpConfig config = new SingleUserFtpConfig(props);
-		
-		Commander.printUssage(config);
+
+		PrintUssageHolder.printUssage(config);
 	}
 
 }

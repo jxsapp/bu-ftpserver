@@ -43,7 +43,7 @@ public class CommanderFtpTest {
 	@After
 	public void tearDown() throws IOException, InterruptedException {
 		client.disconnect();
-		Commander.requestStop();
+		Commander.stop();
 	}
 
 	@Test

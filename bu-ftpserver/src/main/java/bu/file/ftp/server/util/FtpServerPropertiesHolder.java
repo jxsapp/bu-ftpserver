@@ -3,13 +3,13 @@ package bu.file.ftp.server.util;
 import java.io.IOException;
 import java.util.Properties;
 
-public final class PropertiesHolder {
+public final class FtpServerPropertiesHolder {
 	private static Properties props;
 	static {
 		props = new Properties();
 		try {
-			props.load(PropertiesHolder.class.getClassLoader()
-					.getResourceAsStream("config.properties"));
+			props.load(FtpServerPropertiesHolder.class.getClassLoader()
+					.getResourceAsStream("ftp_server_config.properties"));
 		} catch (IOException e) {
 			throw new RuntimeException("载入属性文件失败");
 		}
