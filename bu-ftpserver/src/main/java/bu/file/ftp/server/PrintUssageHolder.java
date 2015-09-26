@@ -1,15 +1,11 @@
 package bu.file.ftp.server;
 
-import static java.lang.System.out;
-
 import org.apache.commons.lang3.StringUtils;
 
 import bu.file.ftp.server.util.NetworkUtils;
 
 public class PrintUssageHolder {
 
-	
-	
 	protected static void printUssage(SingleUserFtpConfig config) {
 		String serverIp = NetworkUtils.getLocalhostIp();
 		String protocol = config.isSsl() ? "ftps" : "ftp";
@@ -65,17 +61,15 @@ public class PrintUssageHolder {
 		}
 	}
 
-	
-
 	private static void printf(String format, Object... args) {
-		out.printf(format, args);
+		System.out.printf(format, args);
 	}
 
 	private static void println(String str) {
-		out.println(str);
+		System.out.println(str);
 	}
 
 	private static void println() {
-		out.println();
+		System.out.println();
 	}
 }
